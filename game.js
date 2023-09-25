@@ -15,6 +15,6 @@ function startGame() {
     ctx.textAlign = 'end';
 
     for (let i = 1; i <= 10; i++) {
-        ctx.fillText(emojis['X'], elemetsSize * i, elemetsSize);
-    }
+        ctx.fillText(emojis['X'], elemetsSize * i+9, elemetsSize);
+    };
 };
