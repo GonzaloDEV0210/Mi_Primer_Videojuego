@@ -14,7 +14,13 @@ function startGame() {
     ctx.font = elemetsSize + "px arial";
     ctx.textAlign = 'end';
 
+    let arrayMaps = maps[1].trim().split("\n");
+    let arrayMapsNew = arrayMaps.map(row => row.trim().split(""));
+    console.log(arrayMapsNew[0][2]);
+
     for (let i = 1; i <= 10; i++) {
-        ctx.fillText(emojis['X'], elemetsSize * i+9, elemetsSize);
+        for (let j = 1; j <= 10; j++) {
+            ctx.fillText(emojis[arrayMapsNew[j-1][i-1]], elemetsSize * i+9, elemetsSize * j);
+        };
     };
 };
